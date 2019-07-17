@@ -13,7 +13,7 @@ Columns:
 ## Approach
 We create Profiles for User-IP over certain time periods. This time period can vary from few hours to few weeks. The profile can include basic count vectors such as total counts, average unit(day/week/hour) counts to complex network calls vectors such as upload/download ratio based on the use case. 
 
-In this repo we use basic count and frequency vectors. With profiles in hand we can use ML algoriths to identify anomalies.
+In this repo we use basic count and frequency vectors. With profiles in hand, we can use ML algorithms to identify anomalies.
 
 ## ML Approach
 Once the feaure space is generated, we use kmeans to cluster and the points which are farther from all clusters combined are considered anomalous. We use sum of squared distances from the centroids in this repo. We use squared distance instead of absolute distance to weigh the outliers more than others(similar to using MAE vs MSE).
